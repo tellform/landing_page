@@ -1,28 +1,10 @@
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$rootScope', '$scope', 'Menus', '$state', 'Auth', 'User',
+angular.module('core').controller('HeaderController', ['$rootScope', '$scope', 'Menus', '$state',
 	function ($rootScope, $scope, Menus, $state, Auth, User) {
-		$scope.user = $rootScope.user = Auth.ensureHasCurrentUser(User);
-	    $scope.authentication = $rootScope.authentication = Auth;
-
-		$rootScope.languages = $scope.languages = ['english', 'french', 'spanish'];
-
 		$scope.isCollapsed = false;
 		$rootScope.hideNav = false;
 		$scope.menu = Menus.getMenu('topbar');
-
-	    $scope.signout = function() {
-		    var promise = User.logout();
-			promise.then(function() {
-				Auth.logout();
-				Auth.ensureHasCurrentUser(User);
-				$scope.user = $rootScope.user = null;
-				$state.go('home');
-			}, 
-			function(reason) {
-			  	console.log('Logout Failed: ' + reason);
-			});
-	    };
 
 		$scope.toggleCollapsibleMenu = function() {
 			$scope.isCollapsed = !$scope.isCollapsed;

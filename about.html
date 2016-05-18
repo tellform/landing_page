@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>TellForm</title>
+
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Semantic META -->
+    <meta name="keywords" content="typeform, pdfs, forms, opensource, formbuilder, google forms, nodejs">
+    <meta name="description" content="Opensource form builder alternative to TypeForm">
+
+    <!-- Facebook META -->
+    <meta property="og:site_name" content="TellForm">
+    <meta property="og:title" content="TellForm">
+    <meta property="og:description" content="Opensource form builder alternative to TypeForm">
+    <meta property="og:url" content="http://www.tellform.com/">
+    <meta property="og:image" content="/img/brand/logo.png">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter META -->
+    <meta name="twitter:title" content="TellForm">
+    <meta name="twitter:description" content="Opensource form builder alternative to TypeForm">
+    <meta name="twitter:url" content="http://www.tellform.com/">
+
+
+    <!-- Fav Icon -->
+    <link href="/public/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <!--Bower CSS dependencies-->
+    
+        <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.css">
+    
+        <link rel="stylesheet" href="/public/modules/core/css/github-fork-ribbon.css"/>
+        
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="gh-fork-ribbon.ie.css">
+    <![endif]-->
+    <!-- end Bower CSS dependencies-->
+
+    <!--Application CSS Files-->
+    
+        <link rel="stylesheet" href="/public/dist/application.min.css">
+    
+    <!-- end Application CSS Files-->
+
+
+    <!-- HTML5 Shim -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-cloak>
+    <div class="github-fork-ribbon-wrapper right-bottom hidden-xs">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/whitef0x0/tellform">Fork me on GitHub</a>
+        </div>
+    </div>
+
+    <header data-ng-include="'/public/modules/core/views/header.client.view.html'"></header>
+
+    <section class="content">
+        <section>
+            <section class="hero-section" style="overflow:hidden;">
+                <div class="opacity-background">
+                </div>
+                <div class="image-background">
+                </div>
+                <div class="jumbotron text-center">
+                    <div class="container">
+                        <div class="row text-center logo" 
+                            style="border-bottom: 1px solid rgba(255,255,255,.2); margin-bottom: 30px;">
+                            <h3 class="col-xs-12" style="color: #FA787E; margin-bottom:0px">
+                                <i class="fa fa-archive fa-3x"></i>
+                            </h3>
+                            <h2 class="col-xs-12"  style="margin-top:0px">
+                                <span>Tell<span style="text-decoration: underline; color: #FA787E;">Form</span></span>
+                            </h2>
+                        </div>
+                        <div class="row" style="margin-top:0px">
+                            <h1 class="lead col-md-10 col-md-offset-1 hidden-xs hidden-sm" style="font-size:3.8em;">
+                                Craft beautiful forms in seconds.
+                            </h1>
+
+                            <h2 class="lead col-sm-12 text-center hidden-md hidden-lg" style="font-size:2.8em;">
+                                Craft beautiful forms.
+                            </h2>
+
+                            <p class="lead hidden-xs hidden-sm col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" style="font-size:1.5em; color:rgba(255,255,255,.75)">
+                                <i>TellForm is an opensource <b>alternative to TypeForm </b> that can create stunning forms from PDFs or from scratch</i>
+                            </p>
+
+                            <p class="lead col-xs-12 hidden-md hidden-lg" style="font-size:1.5em; color:rgba(255,255,255,.75)">
+                                <i>TellForm is an opensource <b>alternative to TypeForm </b> that can create stunning forms from PDFs or from scratch</i>
+                            </h1>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="jumbotron text-center">
+                    <div class="container" data-ng-if="!authentication.isAuthenticated()">
+                        <div class="row" style="margin-top:0px">
+                            <h1 class="lead col-md-10 col-md-offset-1 hidden-xs hidden-sm" style="font-size:3.8em;">
+                                Create your next ______.
+                            </h1>
+
+                            <h1 class="lead col-md-10 col-md-offset-1 hidden-xs hidden-sm" style="font-size:2.5em;">
+                                Tell a story with a form.
+                            </h1>
+
+                        </div>
+                        
+                        <div class="row" style="margin-top:7%;">
+                            <a class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 btn btn-info signup-btn" 
+                                href="https://admin.tellform.com/#!/signup" 
+                                style="background-color:#FA787E; border: none; font-size: 2em; padding: 0.3em 0.9em; color: white;">
+                                sign me up!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<footer class="footer-basic-centered">
+
+            <p class="footer-company-motto">Tell a Story with a Form.</p>
+
+            <p class="footer-links">
+                <a href="/#!/blog">Blog</a>
+                ·
+                <a href="/#!/about">About</a>
+                ·
+                <a href="/#!/terms">Privacy & Terms</a>
+                ·
+                <a href="https://status.tellform.com">System Status</a>
+                ·
+                <a href="mailto:support@tellform.com">Contact</a>
+            </p>
+
+            <p class="footer-company-name">TellForm © 2016</p>
+
+        </footer>
+
+        </section>
+
+    </section>
+
+
+    <!--Bower JS dependencies-->
+    
+        <script type="text/javascript" src="/public/lib/jquery/dist/jquery.min.js"></script>
+    
+        <script type="text/javascript" src="/public/lib/angular/angular.min.js"></script>
+   
+        <script type="text/javascript" src="/public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script type="text/javascript" src="/public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- end Bower JS dependencies-->
+
+    <!--Application JavaScript Files-->
+    
+        <script type="text/javascript" src="/public/dist/application.min.js"></script>
+    
+    <!-- end Application Javascript dependencies-->
+
+    
+    <!-- [if lt IE 9]>
+    <section class="browsehappy jumbotron hide">
+        <h1>Hello there!</h1>
+        <p>You are using an old browser which we unfortunately do not support.</p>
+        <p>Please <a href="http://browsehappy.com/">click here</a> to update your browser before using the website.</p>
+        <p><a href="http://browsehappy.com" class="btn btn-primary btn-lg" role="button">Yes, upgrade my browser!</a></p>
+    </section>
+    <![endif] -->
+
+</body>
+
+</html>
+

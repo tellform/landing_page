@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>TellForm</title>
+
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Semantic META -->
+    <meta name="keywords" content="typeform, pdfs, forms, opensource, formbuilder, google forms, nodejs">
+    <meta name="description" content="Opensource form builder alternative to TypeForm">
+
+    <!-- Facebook META -->
+    <meta property="og:site_name" content="TellForm">
+    <meta property="og:title" content="TellForm">
+    <meta property="og:description" content="Opensource form builder alternative to TypeForm">
+    <meta property="og:url" content="http://www.tellform.com/">
+    <meta property="og:image" content="/img/brand/logo.png">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter META -->
+    <meta name="twitter:title" content="TellForm">
+    <meta name="twitter:description" content="Opensource form builder alternative to TypeForm">
+    <meta name="twitter:url" content="http://www.tellform.com/">
+
+
+    <!-- Fav Icon -->
+    <link href="/public/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <!--Bower CSS dependencies-->
+    
+        <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.css">
+    
+        <link rel="stylesheet" href="/public/modules/core/css/github-fork-ribbon.css"/>
+       <link rel="stylesheet" href="/public/form.css"> 
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="gh-fork-ribbon.ie.css">
+    <![endif]-->
+    <!-- end Bower CSS dependencies-->
+
+    <!--Application CSS Files-->
+    
+        <link rel="stylesheet" href="/public/dist/application.min.css">
+    
+    <!-- end Application CSS Files-->
+
+
+    <!-- HTML5 Shim -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-cloak>
+    <div class="github-fork-ribbon-wrapper right-bottom hidden-xs">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/whitef0x0/tellform">Fork me on GitHub</a>
+        </div>
+    </div>
+
+    <header data-ng-include="'/public/modules/core/views/header.client.view.html'"></header>
+
+    <section class="content" ng-controller='HomeController'>
+        <section>
+            <section class="hero-section" style="overflow:hidden;">
+                <div class="opacity-background">
+                </div>
+                <div class="jumbotron text-center">
+                    <div class="container">
+                        <div class="row text-center logo" 
+                            style="border-bottom: 1px solid rgba(255,255,255,.2); margin-bottom: 30px;">
+                            <h3 class="col-xs-12" style="color: #FA787E; margin-bottom:0px">
+                                <i class="fa fa-archive fa-3x"></i>
+                            </h3>
+                            <h2 class="col-xs-12"  style="margin-top:0px">
+                                <span>Tell<span style="text-decoration: underline; color: #FA787E;">Form</span></span>
+                            </h2>
+                        </div>
+                        <div class="row" style="margin-top:0px">
+                            <h1 class="lead col-md-10 col-md-offset-1 hidden-xs hidden-sm" style="font-size:3.8em;">
+                                Example Forms 
+                            </h1>
+
+                            <h2 class="lead col-sm-12 text-center hidden-md hidden-lg" style="font-size:2.8em;">
+                                Example Forms
+                            </h2>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="jumbotron text-center">
+                    <div class="container">
+                        <div class="row" style="margin-top:0px">
+                            <div data-ng-repeat="form in forms" 
+                                ng-style="{ 'background-color': form.backgroundColor, 'color': form.color }"
+                                class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 form-item container">
+
+                                <div class="row">
+                                    <a href="{{form.link}}"  
+                                        ng-style="{ 'color': form.color }"
+                                        class="title-row col-xs-12">
+                                        <h4 class="list-group-item-heading">
+                                            {{form.title}}
+                                        </h4>
+                                    </a>
+                                </div>
+
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<footer class="footer-basic-centered">
+
+            <p class="footer-company-motto">Tell a Story with a Form.</p>
+
+            <p class="footer-links">
+                <a href="http://blog.tellform.com">Blog</a>
+                ·
+                <a href="https://github.com/whitef0x0/tellform">Browse the code</a>
+                ·
+                <a href="https://status.tellform.com">System Status</a>
+                ·
+                <a href="mailto:support@tellform.com">Contact</a>
+            </p>
+
+            <p class="footer-company-name">TellForm © 2016</p>
+
+        </footer>
+
+        </section>
+
+    </section>
+
+
+    <!--Bower JS dependencies-->
+    
+        <script type="text/javascript" src="/public/lib/jquery/dist/jquery.min.js"></script>
+    
+        <script type="text/javascript" src="/public/lib/angular/angular.min.js"></script>
+   
+        <script type="text/javascript" src="/public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script type="text/javascript" src="/public/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- end Bower JS dependencies-->
+
+    <!--Application JavaScript Files-->
+    
+        <script type="text/javascript" src="/public/dist/application.min.js"></script>
+    
+    <!-- end Application Javascript dependencies-->
+
+    
+    <!-- [if lt IE 9]>
+    <section class="browsehappy jumbotron hide">
+        <h1>Hello there!</h1>
+        <p>You are using an old browser which we unfortunately do not support.</p>
+        <p>Please <a href="http://browsehappy.com/">click here</a> to update your browser before using the website.</p>
+        <p><a href="http://browsehappy.com" class="btn btn-primary btn-lg" role="button">Yes, upgrade my browser!</a></p>
+    </section>
+    <![endif] -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76861420-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+</body>
+
+</html>
+
