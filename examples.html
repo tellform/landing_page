@@ -99,9 +99,11 @@
                 <div class="jumbotron text-center">
                     <div class="container">
                         <div class="row" style="margin-top:0px">
-                            <div data-ng-repeat="form in forms" 
-                                ng-style="{ 'background-color': form.backgroundColor, 'color': form.color }"
-                                class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 form-item container">
+                            
+                        <div data-ng-repeat="form in forms" 
+                                class="text-center col-xs-6 col-sm-3">
+                            <div ng-style="{ 'background-color': form.backgroundColor, 'color': form.color }"
+                                class="form-item container">
 
                                 <div class="row">
                                     <a href="{{form.link}}"  
@@ -114,6 +116,8 @@
                                 </div>
 
                             </div> 
+                        </div>
+                        
                         </div>
                     </div>
                 </div>

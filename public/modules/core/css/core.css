@@ -15,6 +15,9 @@ body {
 .navbar .navbar-brand:hover, .navbar .navbar-brand:visited {
 	color: #FA787E;
 }
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #BDBDBD!important;
+}
 .navbar li.dropdown a.dropdown-toggle:hover > *{
 	color: black;
 }
