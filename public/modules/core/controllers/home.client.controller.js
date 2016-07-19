@@ -5,7 +5,7 @@ angular.module('core').controller('HomeController', ['$rootScope', '$scope',
 		$scope = $rootScope;
 
         $scope.forms = [
-            {
+          {
                 'backgroundColor': '#ff',
                 'color': '#000',
                 'title': 'Newsletter Signup Example',
@@ -28,7 +28,7 @@ angular.module('core').controller('HomeController', ['$rootScope', '$scope',
                 'color': '#000',
                 'title': 'Market Research Survey Example',
                 'link': 'https://example.tellform.com/#!/forms/5765b23fa7fc443c354388d2'
-            } 
+            }
         ];   
     }
 ]);

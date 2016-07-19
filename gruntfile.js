@@ -2,38 +2,19 @@
 
 module.exports = function(grunt) {
 	require('jit-grunt')(grunt);
-	
+
 	// Unified Watch Object
 	var watchFiles = {
-		serverViews: ['app/views/**/*.*'],
-		serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js', '!app/tests/'],
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
-		serverTests: ['app/tests/**/*.js'],
-		clientTests: ['public/modules/**/tests/*.js'],
-		allTests: ['public/modules/**/tests/*.js', 'app/tests/**/*.js'],
+		clientTests: ['public/modules/**/tests/*.js']
 	};
 
 	// Project Configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-			serverViews: {
-				files: watchFiles.serverViews,
-				options: {
-					livereload: true,
-					spawn: false
-				}
-			},
-			serverJS: {
-				files: watchFiles.serverJS,
-				tasks: ['newer:jshint'],
-				options: {
-					livereload: true,
-					spawn: false
-				}
-			},
 			clientViews: {
 				files: watchFiles.clientViews,
 				tasks: ['html2js:main'],
@@ -57,21 +38,17 @@ module.exports = function(grunt) {
 					livereload: true,
 					spawn: false
 				}
-			},
-			mochaTests: {
-				files: watchFiles.serverTests,
-				tasks: ['test:server'],
 			}
 		},
 		jshint: {
 			all: {
-				src: watchFiles.clientJS.concat(watchFiles.serverJS),
+				src: watchFiles.clientJS,
 				options: {
 					jshintrc: true
 				}
 			},
 			allTests: {
-				src: watchFiles.allTests,
+				src: watchFiles.clientTests,
 				options: {
 					jshintrc: true
 				}
@@ -102,42 +79,11 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		nodemon: {
-			dev: {
-				script: 'server.js',
-				options: {
-					nodeArgs: ['--debug'],
-					ext: 'js,html',
-					watch: watchFiles.serverViews.concat(watchFiles.serverJS)
-				}
-			}
-		},
-		'node-inspector': {
-			custom: {
-				options: {
-					'web-port': 1337,
-					'web-host': 'localhost',
-					'debug-port': 5858,
-					'save-live-edit': true,
-					'no-preload': true,
-					'stack-trace-limit': 50,
-					'hidden': []
-				}
-			}
-		},
 		ngAnnotate: {
 			production: {
 				files: {
 					'public/dist/application.js': '<%= applicationJavaScriptFiles %>'
 				}
-			}
-		},
-		concurrent: {
-			default: ['nodemon', 'watch'],
-			debug: ['nodemon', 'watch', 'node-inspector'],
-			options: {
-				logConcurrentOutput: true,
-				limit: 10
 			}
 		},
 		env: {
@@ -157,7 +103,7 @@ module.exports = function(grunt) {
 			src: watchFiles.serverTests,
 			options: {
 				reporter: 'spec',
-				quiet: false, 
+				quiet: false,
 				require: 'server.js',
 				ui: 'bdd'
 			}
@@ -168,53 +114,12 @@ module.exports = function(grunt) {
 			    singleRun: true
             }
 		},
-		protractor: {
-			options: {
-				configFile: 'protractor.conf.js',
-				keepAlive: true,
-				noColor: false
-			},
-			e2e: {
-				options: {
-					args: {} // Target-specific arguments
-				}
-			}
-	    },
 	    mocha_istanbul: {
             coverage: {
-                src: watchFiles.allTests, // a folder works nicely
-                options: {
-                    mask: '*.test.js',
-                    require: ['server.js'],
-                }
-            },
-            coverageClient: {
                 src: watchFiles.clientTests, // specifying file patterns works as well
                 options: {
-                    coverageFolder: 'coverageClient',
-                    mask: '*.test.js',
-                    require: ['server.js'],
-                }
-            },
-            coverageServer: {
-                src: watchFiles.serverTests,
-                options: {
-                    coverageFolder: 'coverageServer',
-                    mask: '*.test.js',
-                    require: ['server.js'],
-                }
-            },
-            coveralls: {
-                src: watchFiles.allTests, // multiple folders also works
-                options: {
-                	require: ['server.js'],
-                    coverage: true, // this will make the grunt.event.on('coverage') event listener to be triggered
-                    check: {
-                        lines: 75,
-                        statements: 75
-                    },
-                    root: './lib', // define where the cover task should consider the root of libraries that are covered by tests
-                    reportFormats: ['cobertura','lcovonly']
+                    coverageFolder: 'coverage',
+                    mask: '*.test.js'
                 }
             }
         },
@@ -278,29 +183,15 @@ module.exports = function(grunt) {
 
 
 	// Code coverage tasks.
-	grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
     grunt.registerTask('coverage', ['env:test', 'mocha_istanbul:coverage']);
-    grunt.registerTask('coverage:client', ['env:test', 'mocha_istanbul:coverageClient']);
-    grunt.registerTask('coverage:server', ['env:test', 'mocha_istanbul:coverageServer']);
-
-	// Default task(s).
-	grunt.registerTask('default', ['lint', 'html2js:main', 'env', 'concurrent:default']);
-	
-	// Debug task.
-	grunt.registerTask('debug', ['lint', 'html2js:main', 'concurrent:debug']);
-
-	// Secure task(s).
-	grunt.registerTask('secure', ['env:secure', 'lint', 'html2js:main', 'concurrent:default']);
 
 	// Lint task(s).
 	grunt.registerTask('lint', ['jshint', 'csslint']);
 	grunt.registerTask('lint:tests', ['jshint:allTests']);
 
 	// Build task(s).
-	grunt.registerTask('build', ['lint', 'loadConfig', 'cssmin', 'ngAnnotate', 'uglify', 'html2js:main']);
+	grunt.registerTask('default', ['lint', 'loadConfig', 'cssmin', 'ngAnnotate', 'uglify', 'html2js:main']);
 
 	// Test task.
-	grunt.registerTask('test', ['lint:tests', 'test:server', 'test:client']);
-	grunt.registerTask('test:server', ['lint:tests', 'env:test', 'mochaTest']);
-	grunt.registerTask('test:client', ['lint:tests', 'html2js:main', 'env:test', 'karma:unit']);
+	grunt.registerTask('test', ['lint:tests', 'html2js:main', 'env:test', 'karma:unit']);
 };

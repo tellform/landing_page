@@ -1,16 +1,49 @@
 body {
 	overflow-x: hidden;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+	line-height:170%;
 }
 
 /*Navbar Custom CSS*/
 .navbar-inverse {
-	background-color:#fafafa;
+	background-color:#ECEEF0;
 	border: 0;
+	margin-bottom: 0;
 }
-.navbar .navbar-brand {
+.navbar-header {
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+}
+.navbar-toggle, .navbar-brand {float:none;}
+
+.navbar-nav > li > a{
+	padding-top: 0;
+	font-weight:500;
+}
+.navbar .navbar-header {
+	display: inline-block;
+	float: none;
+}
+
+.navbar .navbar-nav {
+	display: inline-block;
+	float: none;
+}
+
+.navbar .navbar-collapse {
+	text-align: center;
+}
+
+.navbar > .container-fluid .navbar-brand {
 	font-size: 1.6em;
 	font-weight: 900;
 	color: rgb(255,131,131);
+	margin-left: 0;
+	padding-bottom: 0;
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:visited {
 	color: #FA787E;
@@ -55,49 +88,242 @@ body {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
 	display: none !important;
 }
-.browsehappy.jumbotron.hide,
-body.ng-cloak
-{
-	display: block;
+
+section {
+	padding: 2em 0 5em 0;
+}
+section .row {
+	padding-bottom: 1em;
+}
+hr {
+	border-color: inherit;
 }
 
-/*Hero Section CSS (for /home)*/
+/*Hero Section CSS*/
 section.hero-section {
-	width: 100%;
+	padding-top: 0;
+	background-color: #ECEEF0;
+	color: #919496;
 }
-section.hero-section .jumbotron {
-	background-color: transparent;
-	color:#fff;
+
+section.hero-section .btn-row {
+	padding-top:2.5em;
 }
-	.image-background {
-	 	position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: -98;
-        background-image: url(http://yourplaceandmine.ie/wp-content/uploads/2014/09/Daingean-meeting-048_13-1080x675.jpg);
-		background-repeat: no-repeat;
-		background-position: 0 50%;
-		background-size: cover;
-	}
 
-	.opacity-background {
-	 	position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.5);
-        z-index: -97;
-	}
+section.hero-section .btn-info.btn {
+	font-size: 0.9em;
+	padding: .8em 2.2em .8em 2.2em;
+	border-radius: 3em;
+}
+section.hero-section .signup-btn {
+	background-color:#ACAFB1;
+	color: white;
+	border: none;
+	margin-left:4.5em;
+}
 
-	section.hero-section .jumbotron .signup-btn {
-		background-color:#FA787E; 
-		border: none; 
-		font-size: 2em; 
-		padding: 0.3em 0.9em; 
-		color: white;
-	}
+section.hero-section .demo-btn {
+	background-color: #ECEEF0;
+	color: #7F8183;
+	border-color: #DADBDD;
+	border-width: 0.2em;
+	margin-right:4.5em;
+}
 
+.hero-section .demo-btn:focus, .hero-section .demo-btn:hover {
+	color: #ECEEF0;
+	background-color: #7F8183;
+	border-color: #7F8183;
+}
+
+
+section.hero-section .row-img {
+	padding-top: 3em;
+	padding-bottom: 5em;
+	border-radius: 1em;
+}
+
+/*
+** Features Section
+*/
+
+.features-section {
+	background: white;
+	color: #C2C5C6
+}
+
+.features-section .row.intro > h1 {
+	color: #7B7D7F;
+	font-size:2.5em;
+	font-weight:500;
+	padding-bottom: 0.8em;
+}
+
+.features-section .row.intro > p {
+	color: #7B7D7F;
+	font-size:1.2em;
+	font-weight:300;
+}
+
+.features-section .row-list {
+	padding: 2em 0;
+}
+.features-section .row-list .header {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #7b7d7f;
+}
+.features-section .row-list .description {
+	font-size: 1.2em;
+	font-weight:300;
+	margin-left: 1.2em;
+	margin-top: 0.2em;
+}
+
+/*
+** Opensource Section
+*/
+
+.opensource-section {
+	background-color: #ECEEF0;
+	color: #919496;
+}
+
+.opensource-section .row-list {
+	padding-bottom: 4em;
+	padding-top: 1.5em;
+}
+
+.opensource-section .row-list .header {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #7b7d7f;
+	padding-bottom: 1em;
+}
+
+.opensource-section .row-list .description {
+	font-size: 1em;
+	font-weight:300;
+}
+
+/*
+** Testimonials Section
+*/
+
+.testimonials-section {
+	background: white;
+	color: #C2C5C6
+}
+
+.testimonials-section h1 {
+	color: #7B7D7F;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size:2.5em;
+}
+
+/*
+** Hosting Section
+*/
+
+.host-section {
+	background-color: #ECEEF0;
+	color: #919496;
+}
+.host-section .btn-row {
+	padding-top:2.5em;
+}
+
+.host-section .demo-btn {
+	font-size: 0.9em;
+	padding: .8em 2.2em .8em 2.2em;
+	border-radius: 3em;
+	background-color: #ECEEF0;
+	color: #7F8183;
+	border-color: #DADBDD;
+	border-width: 0.2em;
+	margin-right:4.5em;
+}
+
+.host-section .demo-btn:focus, .host-section .demo-btn:hover {
+	color: #ECEEF0;
+	background-color: #7F8183;
+	border-color: #7F8183;
+}
+
+/*
+** Stats Section
+*/
+
+.stats-section {
+	background: white;
+	color: #C2C5C6
+}
+
+.stats-section .stat-icon {
+	font-size: 2.5em;
+}
+.stats-section .stat-num {
+	font-size: 2.5em;
+	font-weight: 900;
+	color: #7B7D7F;
+}
+.stats-section .stat-name {
+	font-size: 1em;
+	color: #7B7D7F;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.stats-section .stat-description {
+	font-size: 0.8em;
+	color: #7B7D7F;
+	font-weight: 500;
+	padding-top: 0.2em;
+}
+
+.stats-section .stat-description hr {
+	width: 5%;
+	border-width: 0.2em;
+	border-color: #7B7D7F;
+}
+
+/*
+** Newsletter Section
+*/
+
+.newsletter-section {
+	background-image: url("http://brainandstorm.com/wp-content/uploads/CN-Tower-Grey-Skies-1600.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: -150px;
+	color: #7B7D7F;
+	padding-bottom: 7em;
+	padding-top: 3em;
+}
+
+.newsletter-section h1 {
+	padding-bottom: 0.2em;
+}
+
+.newsletter-section form {
+	padding-bottom: 2em;
+	padding-top: 3em;
+}
+
+.newsletter-section form input[type="email"] {
+	padding: .8em 2.2em;
+	border-radius: 0.2em;
+	border: none;
+	color: #7B7D7F;
+	width: 100%
+}
+
+.newsletter-section form input[type="submit"] {
+	font-size: 1.0em;
+	padding: .8em 2.2em;
+	border-radius: 0.2em;
+	background-color:#DADBDD;
+	color: #7B7D7F;
+	margin-left:4.5em;
+}
