@@ -38,17 +38,18 @@
     <!--Bower CSS dependencies-->
     
         <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.css">
-    
-        <link rel="stylesheet" href="/public/modules/core/css/github-fork-ribbon.css"/>
-       <link rel="stylesheet" href="/public/form.css"> 
+
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="gh-fork-ribbon.ie.css">
     <![endif]-->
     <!-- end Bower CSS dependencies-->
 
     <!--Application CSS Files-->
-    
-        <link rel="stylesheet" href="/public/dist/application.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/public/modules/core/css/core.css">
+	<link rel="stylesheet" href="/public/modules/core/css/footer.css">
+	<link rel="stylesheet" href="/public/modules/core/css/form.css">
     
     <!-- end Application CSS Files-->
 
@@ -60,30 +61,13 @@
 </head>
 
 <body ng-cloak>
-    <div class="github-fork-ribbon-wrapper right-bottom hidden-xs">
-        <div class="github-fork-ribbon">
-            <a href="https://github.com/whitef0x0/tellform">Fork me on GitHub</a>
-        </div>
-    </div>
 
     <header data-ng-include="'/public/modules/core/views/header.client.view.html'"></header>
 
-    <section class="content" ng-controller='HomeController'>
-        <section>
+    <section class="content" ng-controller='HomeController' style="padding-top:0; padding-bottom:0;">
             <section class="hero-section" style="overflow:hidden;">
-                <div class="opacity-background">
-                </div>
                 <div class="jumbotron text-center">
                     <div class="container">
-                        <div class="row text-center logo" 
-                            style="border-bottom: 1px solid rgba(255,255,255,.2); margin-bottom: 30px;">
-                            <h3 class="col-xs-12" style="color: #FA787E; margin-bottom:0px">
-                                <i class="fa fa-archive fa-3x"></i>
-                            </h3>
-                            <h2 class="col-xs-12"  style="margin-top:0px">
-                                <span>Tell<span style="text-decoration: underline; color: #FA787E;">Form</span></span>
-                            </h2>
-                        </div>
                         <div class="row" style="margin-top:0px">
                             <h1 class="lead col-md-10 col-md-offset-1 hidden-xs hidden-sm" style="font-size:3.8em;">
                                 Example Forms 
@@ -123,27 +107,28 @@
                 </div>
             </section>
 
-<footer class="footer-basic-centered">
+		<footer class="footer-basic-centered">
 
-            <p class="footer-company-motto">Tell a Story with a Form.</p>
+			<div class="footer-company-name">
+				<h1>TellForm</h1>
+				<small>OPEN SOURCE FORM CREATOR</small>
+				<hr>
+			</div>
 
-            <p class="footer-links">
-                <a href="http://blog.tellform.com">Blog</a>
-                ·
-                <a href="https://github.com/whitef0x0/tellform">Browse the code</a>
-                ·
-                <a href="https://status.tellform.com">System Status</a>
-                ·
-                <a href="mailto:support@tellform.com">Contact</a>
-            </p>
+			<p class="footer-links">
+				<a href="/">Home</a>
+				<a href="/about">About Us</a>
+				<a href="mailto:polydaic@gmail.com">Contact Us</a>
 
-            <p class="footer-company-name">TellForm © 2016</p>
+				<a href="https://blog.tellform.com">Blog</a>
+				<a href="https://status.tellform.com">System Status</a>
+				<a href="https://admin.tellform.com/#!/signup">Register</a>
+			</p>
 
-        </footer>
+			<p class="footer-copyright">TellForm © 2016</p>
 
-        </section>
+		</footer>
 
-    </section>
 
 
     <!--Bower JS dependencies-->
