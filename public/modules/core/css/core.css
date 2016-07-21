@@ -119,15 +119,15 @@ section.hero-section .signup-btn {
 	background-color:#ACAFB1;
 	color: white;
 	border: none;
-    margin-right: 1em;
+    margin-top: 1em;
 }
 
 section.hero-section .demo-btn {
+    margin-top: 1em;
 	background-color: #ECEEF0;
 	color: #7F8183;
 	border-color: #DADBDD;
 	border-width: 0.2em;
-    margin-left: 1em;
 }
 
 .hero-section .demo-btn:focus, .hero-section .demo-btn:hover {
