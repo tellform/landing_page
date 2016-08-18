@@ -9,7 +9,7 @@ p {
 
 /*Navbar Custom CSS*/
 .navbar-inverse {
-	background-color:#ECEEF0;
+	background-color: transparent;
 	border: 0;
 	margin-bottom: 0;
 }
@@ -68,7 +68,7 @@ p {
 }
 
 .navbar-inverse .navbar-nav>li>a, .navbar li.dropdown a.dropdown-toggle > * {
-    color: rgb(131,131,131);
+    color: #FFD747;
 }
 .navbar-inverse .navbar-nav .active > a, .navbar li.dropdown.open a.dropdown-toggle > *, .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
 	background-color: rgb(131,131,131);
@@ -92,7 +92,7 @@ p {
 section {
 	padding: 2em 0 5em 0;
 }
-section .row {
+section:not(.hero-section) .row {
 	padding-bottom: 1em;
 }
 hr {
@@ -101,33 +101,44 @@ hr {
 
 /*Hero Section CSS*/
 section.hero-section {
-	padding-top: 0;
-	background-color: #ECEEF0;
-	color: #919496;
-}
-
-section.hero-section .btn-row {
-	padding-top:2.5em;
-}
-
-section.hero-section .btn-info.btn {
-	font-size: 0.9em;
-	padding: .8em 2.2em .8em 2.2em;
-	border-radius: 3em;
-}
-section.hero-section .signup-btn {
-	background-color:#ACAFB1;
+	padding: 0;
+	margin-bottom: -98px;
 	color: white;
-	border: none;
-    margin-top: 1em;
+	background-color: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(137deg, #50B5C1 0%, #6450A0 85%);
+	background: linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50B5C1', endColorstr='#6450A0', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+section.hero-section .btn-row {
+	padding-top: 56px;
+}
+
+.hero-section .btn {
+	font-size: 12px;
+	color: #896D0B;
+	padding: 12px 28px;
+	border-radius: 100px;
+	margin-top: 1em;
+}
+.hero-section .signup-btn {
+	background-color: #FFD747;
+	color: #896D0B;
+	border: 2px #FFD747 solid;
+}
+
+section.hero-section .btn:hover {
+	background-color: white;
+	color: #1e5799;
+	border-color: white;
 }
 
 section.hero-section .demo-btn {
-    margin-top: 1em;
-	background-color: #ECEEF0;
-	color: #7F8183;
-	border-color: #DADBDD;
-	border-width: 0.2em;
+	background-color: transparent;
+	color: white;
+	border-color: white;
+	border-width: 2px;
 }
 
 .hero-section .demo-btn:focus, .hero-section .demo-btn:hover {
@@ -136,11 +147,8 @@ section.hero-section .demo-btn {
 	border-color: #7F8183;
 }
 
-
 section.hero-section .row-img {
-	padding-top: 3em;
-	padding-bottom: 5em;
-	border-radius: 1em;
+	margin-top: 43px;
 }
 
 /*
@@ -148,6 +156,7 @@ section.hero-section .row-img {
 */
 
 .features-section {
+	padding-top: 176px;
 	background: white;
 	color: #C2C5C6
 }

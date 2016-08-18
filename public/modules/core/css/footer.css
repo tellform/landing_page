@@ -1,6 +1,6 @@
-.footer-basic-centered{
-    background-color: #ECEEF0;
-	color: #B6B8BA;
+.footer-basic-centered {
+    background-color: #434658;
+	color: white;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -14,11 +14,14 @@
     color: #646466;
     font-size: 1.6em;
     margin: 0;
+	padding-bottom: 7px;
 }
 
 .footer-basic-centered .footer-company-name > small {
-	font-size: 0.6em;
+	font-size: 12px;
+	color: #ACAFB1;
 	text-transform: uppercase;
+	padding-bottom: 15px;
 }
 
 .footer-basic-centered .footer-company-name > hr {
@@ -31,20 +34,24 @@
     font-weight: 500;
     margin: 0;
 	padding-bottom: 2em;
+	font-size: 16px;
 }
 
 .footer-basic-centered .footer-links a {
+	color: #ACAFB1;
     display:inline-block;
     text-decoration: none;
-    color: inherit;
 	padding: 0 1em;
-	font-size: 0.8em;
 }
 
 .footer-basic-centered .footer-links a:hover, .footer-basic-centered .footer-links a:focus {
 	color: #646466;
 }
 
+.footer-basic-centered .footer-copyright {
+	color: #7B7D7F;
+	font-style: italic;
+}
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
