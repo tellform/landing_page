@@ -1,10 +1,16 @@
 body {
 	overflow-x: hidden;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
 }
 
 p {
 	line-height:170%;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 500;
 }
 
 /*Navbar Custom CSS*/
@@ -14,7 +20,7 @@ p {
 	margin-bottom: 0;
 }
 .navbar-header {
-	padding: 15px;
+	padding: 26px;
 	text-align: center;
 	width: 100%;
 }
@@ -41,16 +47,14 @@ p {
 .navbar > .container-fluid .navbar-brand {
 	font-size: 1.6em;
 	font-weight: 900;
-	color: rgb(255,131,131);
 	margin-left: 0;
 	padding-bottom: 0;
 }
-.navbar .navbar-brand:hover, .navbar .navbar-brand:visited {
-	color: #FA787E;
+.navbar .navbar-brand img {
+	display:inline;
+	width: 66px;
 }
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    color: #BDBDBD!important;
-}
+
 .navbar li.dropdown a.dropdown-toggle:hover > *{
 	color: black;
 }
@@ -92,6 +96,7 @@ p {
 section {
 	padding: 2em 0 5em 0;
 }
+
 section:not(.hero-section) .row {
 	padding-bottom: 1em;
 }
@@ -99,11 +104,19 @@ hr {
 	border-color: inherit;
 }
 
+/*FAQ Page*/
+.faq-list .answer {
+	margin-bottom: 1.5em;
+	margin-top: 0.25em;
+	font-weight: 200;
+}
+.faq-list .question h4 {
+	font-weight: 400;
+}
+
 /*Hero Section CSS*/
 section.hero-section {
-	padding: 0;
-	margin-bottom: -98px;
-	color: white;
+		color: white;
 	background-color: #1e5799; /* Old browsers */
 	background: -moz-linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* Chrome10-25,Safari5.1-6 */
@@ -111,16 +124,31 @@ section.hero-section {
 	background: linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50B5C1', endColorstr='#6450A0', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 }
+@media (min-width: 991px) {
+	.hero-section {
+		padding: 0;
+		margin-bottom: -98px;
+	}
+}
+
 section.hero-section .btn-row {
 	padding-top: 56px;
 }
 
-.hero-section .btn {
+section.hero-section a {
+	color: #ddd;
+}
+section.hero-section a:visited, section.hero-section a:hover {
+	color: #ddd;
+}
+
+.btn {
 	font-size: 12px;
 	color: #896D0B;
 	padding: 12px 28px;
 	border-radius: 100px;
 	margin-top: 1em;
+	text-transform: uppercase;
 }
 .hero-section .signup-btn {
 	background-color: #FFD747;
@@ -128,23 +156,29 @@ section.hero-section .btn-row {
 	border: 2px #FFD747 solid;
 }
 
-section.hero-section .btn:hover {
+.hero-section .signup-btn:hover {
+	color: #FFD747;
+	background-color: #896D0B;
+	border: 2px #896D0B solid;
+}
+
+.btn:hover {
 	background-color: white;
 	color: #1e5799;
 	border-color: white;
 }
 
-section.hero-section .demo-btn {
+.demo-btn {
 	background-color: transparent;
 	color: white;
 	border-color: white;
 	border-width: 2px;
 }
 
-.hero-section .demo-btn:focus, .hero-section .demo-btn:hover {
+.demo-btn:focus, .hero-section .demo-btn:hover {
 	color: #ECEEF0;
-	background-color: #7F8183;
-	border-color: #7F8183;
+	background-color: white;
+	border-color: white;
 }
 
 section.hero-section .row-img {
@@ -156,9 +190,15 @@ section.hero-section .row-img {
 */
 
 .features-section {
-	padding-top: 176px;
+
 	background: white;
 	color: #C2C5C6
+}
+
+@media (min-width: 991px) {
+	.features-section {
+		padding-top: 176px;
+	}
 }
 
 .features-section .row.intro > h1 {
@@ -180,13 +220,16 @@ section.hero-section .row-img {
 .features-section .row-list .header {
 	text-transform: uppercase;
 	font-weight: 600;
-	color: #7b7d7f;
+	font-size: 12px;
+	color: #7B7D7F;
+	letter-spacing: 0.02px;
 }
 .features-section .row-list .description {
-	font-size: 1.2em;
 	font-weight:300;
 	margin-left: 1.2em;
 	margin-top: 0.2em;
+	color: #ACAFB1;
+	line-height: 24px;
 }
 
 /*
@@ -194,8 +237,14 @@ section.hero-section .row-img {
 */
 
 .opensource-section {
-	background-color: #ECEEF0;
-	color: #919496;
+	background-color: #40A2CE; /* Old browsers */
+	background: -moz-linear-gradient(137deg, #40A2CE 0%, #70C2E2 85%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(137deg, #40A2CE 0%, #70C2E2 85%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(137deg, #40A2CE 0%, #70C2E2 85%);
+	background: linear-gradient(137deg, #40A2CE 0%, #70C2E2 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40A2CE', endColorstr='#70C2E2', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+	margin-bottom: -200px;
+	color: white;
 }
 
 .opensource-section .row-list {
@@ -208,6 +257,9 @@ section.hero-section .row-img {
 	font-weight: 600;
 	color: #7b7d7f;
 	padding-bottom: 1em;
+}
+
+.opensource-section .row-list .header h1 {
 }
 
 .opensource-section .row-list .description {
@@ -226,38 +278,24 @@ section.hero-section .row-img {
 
 .testimonials-section h1 {
 	color: #7B7D7F;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size:2.5em;
 }
 
 /*
 ** Hosting Section
 */
-
 .host-section {
-	background-color: #ECEEF0;
-	color: #919496;
+	background-color: #B9E2A7;
+	color: white;
 }
-.host-section .btn-row {
-	padding-top:2.5em;
+@media (min-width: 991px) {
+	.host-section {
+		padding-bottom: 0;
+		padding-top: 120px;
+	}
 }
-
-.host-section .demo-btn {
-	font-size: 0.9em;
-	padding: .8em 2.2em .8em 2.2em;
-	border-radius: 3em;
-	background-color: #ECEEF0;
-	color: #7F8183;
-	border-color: #DADBDD;
-	border-width: 0.2em;
-	margin-right:4.5em;
-}
-
-.host-section .demo-btn:focus, .host-section .demo-btn:hover {
-	color: #ECEEF0;
-	background-color: #7F8183;
-	border-color: #7F8183;
+.host-section > .container-fluid {
+	padding-top: 2em;
+	padding-bottom: 4em;
 }
 
 /*
@@ -266,27 +304,23 @@ section.hero-section .row-img {
 
 .stats-section {
 	background: white;
-	color: #C2C5C6
+	color: #7B7D7F;
 }
 
 .stats-section .stat-icon {
 	font-size: 2.5em;
 }
 .stats-section .stat-num {
-	font-size: 2.5em;
+	font-size: 32px;
 	font-weight: 900;
-	color: #7B7D7F;
 }
 .stats-section .stat-name {
-	font-size: 1em;
-	color: #7B7D7F;
+	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 
 .stats-section .stat-description {
-	font-size: 0.8em;
-	color: #7B7D7F;
 	font-weight: 500;
 	padding-top: 0.2em;
 }
@@ -294,7 +328,6 @@ section.hero-section .row-img {
 .stats-section .stat-description hr {
 	width: 5%;
 	border-width: 0.2em;
-	border-color: #7B7D7F;
 }
 
 /*
@@ -302,6 +335,7 @@ section.hero-section .row-img {
 */
 
 .newsletter-section {
+	/*background-color: #7B7D7F;*/
 	background-image: url("http://brainandstorm.com/wp-content/uploads/CN-Tower-Grey-Skies-1600.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -328,7 +362,13 @@ section.hero-section .row-img {
 	width: 100%
 }
 
+.newsletter-section .btn.demo-btn:hover {
+	background-color: #7B7D7F;
+	color: #DADBDD;
+}
+
 .newsletter-section form input[type="submit"] {
+	border: none;
 	font-size: 1.0em;
 	padding: .8em 2.2em;
 	border-radius: 0.2em;

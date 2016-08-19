@@ -36,8 +36,8 @@
 
     <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
     <!--Bower CSS dependencies-->
-    
-        <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.css">
+
+	<link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.css">
 
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="gh-fork-ribbon.ie.css">
@@ -45,7 +45,7 @@
     <!-- end Bower CSS dependencies-->
 
     <!--Application CSS Files-->
-
+	<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/public/modules/core/css/core.css">
 	<link rel="stylesheet" href="/public/modules/core/css/footer.css">
@@ -61,76 +61,60 @@
 </head>
 
 <body ng-cloak>
+	<section class="hero-section" ng-controller='HomeController'>
+		<header data-ng-include="'/public/modules/core/views/header.client.view.html'"></header>
+		<div class="text-center">
+				<div class="container">
+					<div class="row" style="margin-top:0px">
+						<h1 class="lead col-md-10 col-md-offset-1 hidden-xs hidden-sm" style="font-size:2.5em;">
+							Example Forms
+						</h1>
 
-    <header data-ng-include="'/public/modules/core/views/header.client.view.html'"></header>
+						<h2 class="lead col-sm-12 text-center hidden-md hidden-lg" style="font-size:2.8em;">
+							Example Forms
+						</h2>
+					</div>
 
-    <section class="content" ng-controller='HomeController' style="padding-top:0; padding-bottom:0;">
-            <section class="hero-section" style="overflow:hidden;">
-                <div class="jumbotron text-center">
-                    <div class="container">
-                        <div class="row" style="margin-top:0px">
-                            <h1 class="lead col-md-10 col-md-offset-1 hidden-xs hidden-sm" style="font-size:3.8em;">
-                                Example Forms 
-                            </h1>
-
-                            <h2 class="lead col-sm-12 text-center hidden-md hidden-lg" style="font-size:2.8em;">
-                                Example Forms
-                            </h2>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="jumbotron text-center">
-                    <div class="container">
-                        <div class="row" style="margin-top:0px">
-                            
-                        <div data-ng-repeat="form in forms" 
-                                class="text-center col-xs-6 col-sm-3">
-                            <div ng-style="{ 'background-color': form.backgroundColor, 'color': form.color }"
-                                class="form-item container">
-
-                                <div class="row">
-                                    <a href="{{form.link}}"  
-                                        ng-style="{ 'color': form.color }"
-                                        class="title-row col-xs-12">
-                                        <h4 class="list-group-item-heading">
-                                            {{form.title}}
-                                        </h4>
-                                    </a>
-                                </div>
-
-                            </div> 
-                        </div>
-                        
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-		<footer class="footer-basic-centered">
-
-			<div class="footer-company-name">
-				<h1>TellForm</h1>
-				<small>OPEN SOURCE FORM CREATOR</small>
-				<hr>
+				</div>
 			</div>
+			<div class="text-center" style="padding-bottom: 100px;">
+				<div class="container">
+					<div class="row" style="margin-top:0px">
 
-			<p class="footer-links">
-				<a href="/">Home</a>
-				<a href="/about">About Us</a>
-				<a href="mailto:polydaic@gmail.com">Contact Us</a>
-                <a href="https://github.com/whitef0x0/tellform">Browse the Source</a>
-				<a href="https://status.tellform.com">System Status</a>
-				<a href="https://admin.tellform.com/#!/signup">Register</a>
-			</p>
+					<div data-ng-repeat="form in forms"
+							class="text-center col-xs-6 col-sm-3">
+						<div ng-style="{ 'background-color': '#153B4B', 'color': '#fff'}"
+							class="form-item container">
 
-			<p class="footer-copyright">TellForm © 2016</p>
+							<div class="row">
+								<a href="{{form.link}}"
+									ng-style="{ 'color': white }"
+									class="title-row col-xs-12">
+									<h4 class="list-group-item-heading">
+										{{form.title}}
+									</h4>
+								</a>
+							</div>
 
-		</footer>
+						</div>
+					</div>
 
+					</div>
+				</div>
+				<div class="row btn-row text-center">
+					<div class="col-xs-8 col-xs-offset-2 col-sm-offset-4 col-sm-2">
+						<a class="btn signup-btn"
+						   href="https://admin.tellform.com/#!/signup">
+							SIGN UP NOW
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
+	<div data-ng-include="'/public/modules/core/views/footer.client.view.html'"></div>
 
-    <!--Bower JS dependencies-->
+	<!--Bower JS dependencies-->
     
         <script type="text/javascript" src="/public/lib/jquery/dist/jquery.min.js"></script>
     

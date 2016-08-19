@@ -46,7 +46,7 @@ angular.element(document).ready(function() {
 angular.module('NodeForm.templates', []).run(['$templateCache', function($templateCache) {
   "use strict";
   $templateCache.put("../public/modules/core/views/header.client.view.html",
-    "<div class=\"navbar navbar-inverse\" data-ng-controller=HeaderController><div class=container-fluid><div class=navbar-header><a href=\"/\" class=navbar-brand><i class=\"fa fa-archive\" style=\"padding-right: 0.3em\"></i>Tell<span>Form</span></a></div></div><div class=\"container-fluid text-center\"><div class=text-center><button class=navbar-toggle type=button data-toggle=collapse><span>MENU</span></button></div><nav class=\"collapse navbar-collapse\" role=navigation><ul class=\"nav navbar-nav\"><li><a href=\"/\">Home</a></li><li><a href=/examples>Examples</a></li><li><a href=/faq>FAQ</a></li><li><a href=/about>About</a></li><li><a href=mailto:polydaic@gmail.com>Contact</a></li></ul></nav></div></div>");
+    "<div class=\"navbar navbar-inverse\" data-ng-controller=HeaderController><div class=container-fluid><div class=navbar-header><a href=\"/\" class=navbar-brand><i class=\"fa fa-archive\" style=\"padding-right: 0.3em\"></i>Tell<span>Form</span></a></div></div><div class=\"container-fluid text-center\"><nav class=\"collapse navbar-collapse\" role=navigation><ul class=\"nav navbar-nav\"><li><a href=\"/\">Home</a></li><li><a href=/examples>Examples</a></li><li><a href=/faq>FAQ</a></li><li><a href=/about>About</a></li><li><a href=mailto:polydaic@gmail.com>Contact</a></li></ul></nav></div></div>");
 }]);
 
 'use strict';
@@ -83,37 +83,103 @@ angular.module('core').controller('HeaderController', ['$rootScope', '$scope', '
 
 'use strict';
 
-angular.module('core').controller('HomeController', ['$rootScope', '$scope', 
-	function($rootScope, $scope) {
-		$scope = $rootScope;
+angular.module('core').controller('HomeController', ['$scope',
+	function($scope) {
+		$scope.forms = [
+			{
+				'backgroundColor': '#fff',
+				'color': '#000',
+				'title': 'Newsletter Signup Example',
+				'link': 'https://example.tellform.com/#!/forms/5765acc1a7fc443c354388b8'
+			},
+			{
+				'backgroundColor': '#f2f2f2',
+				'color': '#3B6161',
+				'title': 'Contact Form Example',
+				'link': 'https://example.tellform.com/#!/forms/5765adf0a7fc443c354388bb'
+			},
+			{
+				'backgroundColor': '#d2d2d2',
+				'color': '#941900',
+				'title': 'Post-Event Survey Example',
+				'link': 'https://example.tellform.com/#!/forms/5765afcda7fc443c354388c2'
+			},
+			{
+				'backgroundColor': '#f1f3f5',
+				'color': '#000',
+				'title': 'Market Research Survey Example',
+				'link': 'https://example.tellform.com/#!/forms/5765b23fa7fc443c354388d2'
+			}
+		];
 
-        $scope.forms = [
-          {
-                'backgroundColor': '#ff',
-                'color': '#000',
-                'title': 'Newsletter Signup Example',
-                'link': 'https://example.tellform.com/#!/forms/5765acc1a7fc443c354388b8'
-            },
-            {
-                'backgroundColor': "#F2F2F2",
-                'color': '#3B6161',
-                'title': 'Contact Form Example',
-                'link': 'https://example.tellform.com/#!/forms/5765adf0a7fc443c354388bb'
-            },
-            {
-                'backgroundColor': "#d2d2d2",
-                'color': '#941900',
-                'title': 'Post-Event Survey Example',
-                'link': 'https://example.tellform.com/#!/forms/5765afcda7fc443c354388c2'
-            },
-            {
-                'backgroundColor': '#f1f3f5',
-                'color': '#000',
-                'title': 'Market Research Survey Example',
-                'link': 'https://example.tellform.com/#!/forms/5765b23fa7fc443c354388d2'
-            }
-        ];   
-    }
+	}
+]);
+
+'use strict';
+
+angular.module('core').controller('TestimonialController', ['$scope',
+	function($scope) {
+
+
+		/* Testimonial Carousel */
+		$scope.myInterval = 5000;
+		$scope.noWrapSlides = false;
+		$scope.active = 0;
+		var slides = $scope.slides = [];
+		var currIndex = 0;
+
+		$scope.addSlide = function() {
+			console.log('hello');
+			var newWidth = 600 + slides.length + 1;
+			slides.push({
+				image: '/public/img/photo.png',
+				text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+				id: currIndex++
+			});
+		};
+
+		$scope.randomize = function() {
+			var indexes = generateIndexesArray();
+			assignNewIndexesToSlides(indexes);
+		};
+
+		for (var i = 0; i < 4; i++) {
+			$scope.addSlide();
+		}
+
+		// Randomize logic below
+
+		function assignNewIndexesToSlides(indexes) {
+			for (var i = 0, l = slides.length; i < l; i++) {
+				slides[i].id = indexes.pop();
+			}
+		}
+
+		function generateIndexesArray() {
+			var indexes = [];
+			for (var i = 0; i < currIndex; ++i) {
+				indexes[i] = i;
+			}
+			return shuffle(indexes);
+		}
+
+		// http://stackoverflow.com/questions/962802#962890
+		function shuffle(array) {
+			var tmp, current, top = array.length;
+
+			if (top) {
+				while (--top) {
+					current = Math.floor(Math.random() * (top + 1));
+					tmp = array[current];
+					array[current] = array[top];
+					array[top] = tmp;
+				}
+			}
+
+			return array;
+		}
+
+	}
 ]);
 
 'use strict';
