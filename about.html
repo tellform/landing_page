@@ -65,36 +65,55 @@
 	<header data-ng-include="'/public/modules/core/views/header.client.view.html'"></header>
 
 	<div class="container-fluid">
-		<div class="row text-left" style="margin-top:0px; margin-bottom: 20vh;">
+		<div class="row text-left" style="margin-top:0px; margin-bottom: 10vh;">
 			<h1 class="text-center lead col-md-10 col-md-offset-1 col-sm-12 col-xs-12" style="font-size:2.5em; font-weight:600; margin-bottom: 0.1em;">
 				About TellForm
 			</h1>
-
 			<p class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3" style="margin-top: 50px; font-weight:200;">
 				TellForm is a free, opensource form builder similar to Google Forms or TypeForm. It was created and is maintained by David Baldwynn, a Electrical Engineering student studying at UBC.
-
 				<br><br>
 				TellForm grew out of one of David's contracting projects where he was tasked to create a self-hostable, airgapped kiosk for a client in the medicial industry.
 				<br><br>
 				Finding no forms to his liking that were as easy to use as TellForm David set out to create a alternative to TellForm. After working on it for a couple of months in the Summer of 2015, he decided to opensource it.
 				<br><br>
 				TellForm ended up getting posted on HackerNews, which lead to it being hunted on Product Hunt, further legitimizing TellForm and increasing awareness about the project.
-
 			</p>
-
 		</div>
-		<div class="row btn-row text-center">
-			<div class="col-xs-8 col-xs-offset-2 col-sm-offset-4 col-sm-2">
-				<a class="btn signup-btn"
-				   href="https://admin.tellform.com/#!/signup">
-					SIGN UP NOW
-				</a>
+		<div class="text-center" style="padding-bottom: 100px;">
+			<div class="container">
+				<div class="row" style="margin-top:0px">
+
+					<div data-ng-repeat="form in forms"
+						 class="text-center col-xs-6 col-sm-3">
+						<div ng-style="{ 'background-color': '#153B4B', 'color': '#fff'}"
+							 class="form-item container">
+
+							<div class="row">
+								<a href="{{form.link}}"
+								   ng-style="{ 'color': white }"
+								   class="title-row col-xs-12">
+									<h4 class="list-group-item-heading">
+										{{form.title}}
+									</h4>
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="row text-center"
+				<div class="col-xs-8 col-xs-offset-2">
+					<a class="btn signup-btn"
+					   href="https://admin.tellform.com/#!/signup">
+						SIGN UP NOW
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
+	</div>
 </section>
-
-<div data-ng-include="'/public/modules/core/views/footer.client.view.html'"></div>
 
 <!--Bower JS dependencies-->
 

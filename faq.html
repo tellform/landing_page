@@ -71,7 +71,7 @@
 				Frequently Asked Questions
 			</h1>
 		</div>
-		<div class="row text-left " style="padding-bottom:200px;">
+		<div class="row text-left" style="padding-bottom:50px;">
 			<div class="col-sm-6 col-sm-offset-3 faq-list">
 				<div class="col-sm-12 question">
 					<h4>Does TellForm have Conditional Logic/Logic Jump?</h4>
@@ -102,9 +102,40 @@
 
 		</div>
 	</div>
-</section>
+	<div class="text-center" style="padding-bottom: 100px;">
+		<div class="container">
+			<div class="row" style="margin-top:0px">
 
-<header data-ng-include="'/public/modules/core/views/footer.client.view.html'"></header>
+				<div data-ng-repeat="form in forms"
+					 class="text-center col-xs-6 col-sm-3">
+					<div ng-style="{ 'background-color': '#153B4B', 'color': '#fff'}"
+						 class="form-item container">
+
+						<div class="row">
+							<a href="{{form.link}}"
+							   ng-style="{ 'color': white }"
+							   class="title-row col-xs-12">
+								<h4 class="list-group-item-heading">
+									{{form.title}}
+								</h4>
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="row text-center"
+				<div class="col-xs-8 col-xs-offset-2">
+					<a class="btn signup-btn"
+					   href="https://admin.tellform.com/#!/signup">
+						SIGN UP NOW
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
 <!--Bower JS dependencies-->

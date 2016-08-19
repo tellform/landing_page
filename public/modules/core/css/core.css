@@ -135,10 +135,10 @@ section.hero-section .btn-row {
 	padding-top: 56px;
 }
 
-section.hero-section a {
+section.hero-section a:not(.btn) {
 	color: #ddd;
 }
-section.hero-section a:visited, section.hero-section a:hover {
+section.hero-section a:not(.btn):visited, section.hero-section a:not(.btn):hover {
 	color: #ddd;
 }
 
@@ -150,16 +150,16 @@ section.hero-section a:visited, section.hero-section a:hover {
 	margin-top: 1em;
 	text-transform: uppercase;
 }
-.hero-section .signup-btn {
+.signup-btn {
 	background-color: #FFD747;
 	color: #896D0B;
 	border: 2px #FFD747 solid;
 }
 
-.hero-section .signup-btn:hover {
-	color: #FFD747;
-	background-color: #896D0B;
-	border: 2px #896D0B solid;
+.signup-btn:hover {
+	color: #FFD747!important;
+	background-color: #896D0B!important;
+	border: 2px #896D0B solid!important;
 }
 
 .btn:hover {
@@ -335,12 +335,12 @@ section.hero-section .row-img {
 */
 
 .newsletter-section {
-	/*background-color: #7B7D7F;*/
-	background-image: url("http://brainandstorm.com/wp-content/uploads/CN-Tower-Grey-Skies-1600.jpg");
+	background-color: #F3A27B;
+	/*background-image: url("http://brainandstorm.com/wp-content/uploads/CN-Tower-Grey-Skies-1600.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position-y: -150px;
-	color: #7B7D7F;
+	background-position-y: -150px;*/
+	color: white;
 	padding-bottom: 7em;
 	padding-top: 3em;
 }
@@ -362,17 +362,13 @@ section.hero-section .row-img {
 	width: 100%
 }
 
-.newsletter-section .btn.demo-btn:hover {
-	background-color: #7B7D7F;
-	color: #DADBDD;
-}
 
 .newsletter-section form input[type="submit"] {
-	border: none;
+	/*border: none;
 	font-size: 1.0em;
 	padding: .8em 2.2em;
-	border-radius: 0.2em;
 	background-color:#DADBDD;
-	color: #7B7D7F;
+	color: #7B7D7F;*/
+	border-radius: 0.2em;
 	margin-left:4.5em;
 }
