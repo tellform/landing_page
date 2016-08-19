@@ -372,3 +372,22 @@ section.hero-section .row-img {
 	border-radius: 0.2em;
 	margin-left:4.5em;
 }
+
+/* Sponsor section */
+.sponsors {
+	padding-bottom: 2em;
+}
+.sponsors .header {
+	text-transform: uppercase;
+	color: #DADBDD;
+}
+
+.sponsors .sponsors-row img {
+	width: 100%;
+}
+.sponsors .sponsors-row .digitalocean {
+	padding-top: 15px;
+}
+.sponsors .sponsors-row .statuspage {
+	padding-top: 12px;
+}
