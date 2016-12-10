@@ -30,6 +30,7 @@ h1 {
 	padding-top: 0;
 	font-weight:500;
 }
+
 .navbar .navbar-header {
 	display: inline-block;
 	float: none;
@@ -139,7 +140,7 @@ section.hero-section a:not(.btn) {
 	color: #ddd;
 }
 section.hero-section a:not(.btn):visited, section.hero-section a:not(.btn):hover {
-	color: #ddd;
+	color: white;
 }
 
 .btn {
@@ -359,7 +360,8 @@ section.hero-section .row-img {
 	border-radius: 0.2em;
 	border: none;
 	color: #7B7D7F;
-	width: 100%
+	width: 100%;
+	outline: none;
 }
 
 
