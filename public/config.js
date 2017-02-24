@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'NodeForm';
-	var applicationModuleVendorDependencies = ['NodeForm.templates', 'ui.router', 'ui.bootstrap'];
+	var applicationModuleVendorDependencies = ['ui.router', 'ui.bootstrap'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {

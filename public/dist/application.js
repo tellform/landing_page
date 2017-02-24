@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'NodeForm';
-	var applicationModuleVendorDependencies = ['NodeForm.templates', 'ui.router', 'ui.bootstrap'];
+	var applicationModuleVendorDependencies = ['ui.router', 'ui.bootstrap'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
@@ -46,9 +46,9 @@ angular.element(document).ready(function() {
 angular.module('NodeForm.templates', []).run(['$templateCache', function($templateCache) {
   "use strict";
   $templateCache.put("../public/modules/core/views/footer.client.view.html",
-    "<div class=\"navbar navbar-inverse\" data-ng-controller=HeaderController><div class=container-fluid><div class=navbar-header><a href=\"/\" class=navbar-brand><i class=\"fa fa-archive\" style=\"padding-right: 0.3em\"></i>Tell<span>Form</span></a></div></div><div class=\"container-fluid text-center\"><nav class=\"collapse navbar-collapse\" role=navigation><ul class=\"nav navbar-nav\"><li><a href=\"/\">Home</a></li><li><a href=/examples>Examples</a></li><li><a href=/faq>FAQ</a></li><li><a href=/about>About</a></li><li><a href=mailto:polydaic@gmail.com>Contact</a></li></ul></nav></div></div>");
+    "<footer class=footer-basic-centered><div class=footer-company-name><h1>TellForm</h1><small>OPEN SOURCE FORM CREATOR</small><hr></div><p class=footer-links><a href=\"/\">Home</a> <a href=/about>About Us</a> <a href=mailto:polydaic@gmail.com>Contact Us</a> <a href=https://github.com/whitef0x0/tellform>Browse the Source</a> <a href=https://status.tellform.com>System Status</a> <a href=https://admin.tellform.com/#!/signup>Register</a></p><p class=footer-copyright>TellForm © 2016</p></footer>");
   $templateCache.put("../public/modules/core/views/header.client.view.html",
-    "<div class=\"navbar navbar-inverse\" data-ng-controller=HeaderController><div class=container-fluid><div class=navbar-header><a href=\"/\" class=navbar-brand><i class=\"fa fa-archive\" style=\"padding-right: 0.3em\"></i>Tell<span>Form</span></a></div></div><div class=\"container-fluid text-center\"><nav class=\"collapse navbar-collapse\" role=navigation><ul class=\"nav navbar-nav\"><li><a href=\"/\">Home</a></li><li><a href=/examples>Examples</a></li><li><a href=/faq>FAQ</a></li><li><a href=/about>About</a></li><li><a href=mailto:polydaic@gmail.com>Contact</a></li></ul></nav></div></div>");
+    "<div class=\"navbar navbar-inverse\" data-ng-controller=HeaderController><div class=container-fluid><div class=navbar-header><a href=\"/\" class=navbar-brand><img src=/public/img/logo_white.svg></a></div></div><div class=\"container-fluid text-center\"><nav class=\"collapse navbar-collapse\" role=navigation><ul class=\"nav navbar-nav\"><li><a href=\"/\">Home</a></li><li><a href=/examples>Examples</a></li><li><a href=/faq>FAQ</a></li><li><a href=/about>About</a></li><li><a href=https://api.tellform.com>API</a></li><li><a href=mailto:team@tellform.com>Contact</a></li></ul></nav></div></div>");
 }]);
 
 'use strict';
@@ -92,25 +92,25 @@ angular.module('core').controller('HomeController', ['$scope',
 				'backgroundColor': '#fff',
 				'color': '#000',
 				'title': 'Newsletter Signup Example',
-				'link': 'https://example.tellform.com/#!/forms/5765acc1a7fc443c354388b8'
+				'link': 'https://admin.tellform.com/#!/forms/5765acc1a7fc443c354388b8'
 			},
 			{
 				'backgroundColor': '#f2f2f2',
 				'color': '#3B6161',
 				'title': 'Contact Form Example',
-				'link': 'https://example.tellform.com/#!/forms/5765adf0a7fc443c354388bb'
+				'link': 'https://admin.tellform.com/#!/forms/5765adf0a7fc443c354388bb'
 			},
 			{
 				'backgroundColor': '#d2d2d2',
 				'color': '#941900',
 				'title': 'Post-Event Survey Example',
-				'link': 'https://example.tellform.com/#!/forms/5765afcda7fc443c354388c2'
+				'link': 'https://admin.tellform.com/#!/forms/5765afcda7fc443c354388c2'
 			},
 			{
 				'backgroundColor': '#f1f3f5',
 				'color': '#000',
 				'title': 'Market Research Survey Example',
-				'link': 'https://example.tellform.com/#!/forms/5765b23fa7fc443c354388d2'
+				'link': 'https://admin.tellform.com/#!/forms/5765b23fa7fc443c354388d2'
 			}
 		];
 
