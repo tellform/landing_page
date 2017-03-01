@@ -99,41 +99,6 @@ module.exports = function(grunt) {
 			},
 			src: '/opt/deploy/.env'
 		},
-		mochaTest: {
-			src: watchFiles.serverTests,
-			options: {
-				reporter: 'spec',
-				quiet: false,
-				require: 'server.js',
-				ui: 'bdd'
-			}
-		},
-		karma: {
-			unit: {
-				configFile: 'karma.conf.js',
-			    singleRun: true
-            }
-		},
-	    mocha_istanbul: {
-            coverage: {
-                src: watchFiles.clientTests, // specifying file patterns works as well
-                options: {
-                    coverageFolder: 'coverage',
-                    mask: '*.test.js'
-                }
-            }
-        },
-        istanbul_check_coverage: {
-          default: {
-            options: {
-              coverageFolder: 'coverage*', // will check both coverage folders and merge the coverage results
-              check: {
-                lines: 80,
-                statements: 80
-              }
-            }
-          }
-        },
         html2js: {
 		  options: {
 		    base: 'NodeForm',
@@ -157,18 +122,6 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.event.on('coverage', function(lcov, done){
-	    var coveralls = require('coveralls');
-	    coveralls.handleInput(lcov, function(err){
-	        if (err) {
-	        	grunt.log.error('Failed to submit lcov file to coveralls: ' + err);
-	            return done(err);
-	        }
-	        grunt.verbose.ok('Successfully submitted lcov file to coveralls');
-	        done();
-	    });
-	});
-
 	// Making grunt default to force in order not to break the project.
 	grunt.option('force', true);
 
@@ -182,8 +135,6 @@ module.exports = function(grunt) {
 	});
 
 
-	// Code coverage tasks.
-    grunt.registerTask('coverage', ['env:test', 'mocha_istanbul:coverage']);
 
 	// Lint task(s).
 	grunt.registerTask('lint', ['jshint', 'csslint']);
