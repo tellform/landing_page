@@ -20,12 +20,6 @@ angular.module('core').controller('HomeController', ['$scope',
 				'color': '#941900',
 				'title': 'Post-Event Survey Example',
 				'link': 'https://example.tellform.com/#!/forms/5765afcda7fc443c354388c2'
-			},
-			{
-				'backgroundColor': '#f1f3f5',
-				'color': '#000',
-				'title': 'Market Research Survey Example',
-				'link': 'https://example.tellform.com/#!/forms/5765b23fa7fc443c354388d2'
 			}
 		];
 
