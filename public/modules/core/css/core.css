@@ -116,7 +116,7 @@ hr {
 
 /*Hero Section CSS*/
 section.hero-section {
-		color: white;
+	color: white;
 	background-color: #1e5799; /* Old browsers */
 	background: -moz-linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(137deg, #50B5C1 0%, #6450A0 85%); /* Chrome10-25,Safari5.1-6 */

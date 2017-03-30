@@ -1,21 +1,18 @@
 <div class="navbar navbar-inverse" data-ng-controller="HeaderController">
 	<div class="container-fluid">
+
 		<div class="navbar-header">
 			<a href="/" class="navbar-brand">
 				<img src="/public/img/logo_white.svg">
 			</a>
-		</div>
-	</div>
-	<div class="container-fluid text-center">
-		<div class="text-center">
-			<button class="navbar-toggle" type="button" data-toggle="collapse">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
 		</div>
-		<nav class="collapse navbar-collapse" role="navigation">
+		<nav id="navbar" class="collapse navbar-collapse" role="navigation" style="height: 1px;">
 			<ul class="nav navbar-nav">
 				<li>
 					<a href="/">Home</a>
@@ -27,13 +24,6 @@
 					<a href="/selfhosted">Get TellForm</a>
 				</li>
 				<li>
-					<a href="/faq">FAQ</a>
-				</li>
-
-				<li>
-					<a href="/about">About</a>
-				</li>
-				<li>
 					<a href="https://api.tellform.com">API</a>
 				</li>
 				<li>
@@ -41,5 +31,6 @@
 				</li>
 			</ul>
 		</nav>
+
 	</div>
 </div>

@@ -1,0 +1,211 @@
+comparison .feature div {
+	width: 33.33%;
+}
+.new-alt-pages .new-alt-table .feature {
+	display: none;
+}
+.new-alt-pages .new-alt-table .features-top-left {
+	display: block;
+}
+.new-alt-pages .new-alt-table .surveymonkey {
+	display: none;
+}
+.new-alt-pages .new-alt-table .formassembly {
+	display: none;
+}
+.new-alt-pages .new-alt-table .formsite {
+	display: none;
+}
+.new-alt-pages .new-alt-table .surveygizmo {
+	display: none;
+}
+.new-alt-pages .new-alt-table .googleforms {
+	display: none;
+}
+.new-alt-pages .new-alt-table .wufoo {
+	display: none;
+}
+.new-alt-pages .new-alt-table .jotform {
+	display: none;
+}
+.new-alt-pages .new-alt-table .typeform {
+	display: none;
+}
+.new-alt-pages .new-alt-table .squarespace {
+	display: none;
+}
+.new-alt-pages .new-alt-table .emailmeform {
+	display: none;
+}
+.new-alt-pages .new-alt-table .wix {
+	display: none;
+}
+.new-alt-pages .new-alt-table .weebly {
+	display: none;
+}
+.new-alt-pages .new-alt-table .new-alt-table-header .formstack-logo--alt-chart {
+	height: 25px;
+	width: auto;
+	margin-top: 15px;
+	-moz-border-radius: 0%;
+	-webkit-border-radius: 0%;
+	border-radius: 0%;
+}
+.new-alt-pages .new-alt-table .new-alt-table-header .features {
+	width: 33.22%;
+	float: left;
+}
+.new-alt-pages .new-alt-table .new-alt-table-header .competitor,
+.new-alt-pages .new-alt-table .new-alt-table-header .formstack {
+	float: left;
+	background-color: #f1f5f6;
+	text-align: center;
+	border: 0;
+	width: 33.333333333%;
+	height: 60px;
+}
+.new-alt-pages .new-alt-table .new-alt-table-header .formstack span {
+	background-color: #f1f5f6;
+}
+.new-alt-pages .new-alt-table .feature div {
+	height: 60px;
+}
+.new-alt-pages .new-alt-table .feature div:not(.feature-name-alt) {
+	background-color: #f1f5f6;
+	color: #455560;
+	font-size: 20px;
+	padding: 15px 30px;
+	border: 0;
+}
+.new-alt-pages .new-alt-table .feature div.formstack {
+	background-color: #f1f5f6;
+}
+.new-alt-pages .new-alt-table .feature div.divider-row__title {
+	width: 100%;
+	color: white;
+	padding: 15px;
+	background-color: #455560;
+}
+.new-alt-pages .new-alt-table .feature div.divider-row__title p {
+	font-size: 20px;
+}
+@media screen and (max-width: 39.9375em) {
+	.new-alt-pages .new-alt-table .feature div.divider-row__title {
+		width: 99%;
+	}
+}
+.new-alt-pages .new-alt-table .feature div.feature-name-alt {
+	background-color: #7bc143;
+	color: white;
+	font-weight: 600;
+	font-size: 12px;
+	padding: 15px 25px;
+	text-align: right;
+	border: 0;
+}
+@media screen and (max-width: 39.9375em) {
+	.new-alt-pages .new-alt-table .feature div.feature-name-alt {
+		padding: 30px 15px;
+	}
+	.new-alt-pages .new-alt-table .feature div.feature-name-alt p {
+		font-size: 12px;
+	}
+}
+.new-alt-pages .new-alt-table .feature div.feature-name-alt p {
+	margin-bottom: 0;
+}
+.new-alt-pages .new-alt-table--surveymonkey .surveymonkey {
+	display: block;
+}
+.new-alt-pages .new-alt-table--formassembly .formassembly {
+	display: block;
+}
+.new-alt-pages .new-alt-table--surveygizmo .surveygizmo {
+	display: block;
+}
+.new-alt-pages .new-alt-table--formsite .formsite {
+	display: block;
+}
+.new-alt-pages .new-alt-table--jotform .jotform {
+	display: block;
+}
+.new-alt-pages .new-alt-table--googleforms .googleforms {
+	display: block;
+}
+.new-alt-pages .new-alt-table--wufoo .wufoo {
+	display: block;
+}
+.new-alt-pages .new-alt-table--typeform .typeform {
+	display: block;
+}
+.new-alt-pages .new-alt-table--squarespace .squarespace {
+	display: block;
+}
+.new-alt-pages .new-alt-table--emailmeform .emailmeform {
+	display: block;
+}
+.new-alt-pages .new-alt-table--wix .wix {
+	display: block;
+}
+.new-alt-pages .new-alt-table--weebly .weebly {
+	display: block;
+}
+.new-alt-pages .competitor-page-header {
+	padding-left: 20px;
+}
+.new-alt-pages .formstack-logo-alt-pages {
+	height: 40px;
+	border-right: 1px solid white;
+	padding-right: 20px;
+	vertical-align: middle;
+	margin-bottom: 7px;
+}
+.new-alt-pages .alternative-label {
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding: 10px;
+}
+.new-alt-pages .testimonial-container--relative {
+	position: relative;
+}
+@media screen and (min-width: 64em) {
+	.new-alt-pages .avatar-alt-page {
+		position: absolute;
+		bottom: 30px;
+	}
+}
+.new-alt-pages .testimonial-avatar-alt {
+	float: left;
+	border-radius: 40px;
+}
+.new-alt-pages .feature-divider-border {
+	padding-bottom: 20px;
+	border-bottom: 1px solid white;
+}
+.new-alt-pages .alt-checkmark {
+	font-size: 1.5rem;
+}
+@media screen and (max-width: 39.9375em) {
+	.new-alt-pages .alt-checkmark {
+		font-size: 16px;
+	}
+}
+.new-alt-pages .checkmark-border {
+	border-bottom: 1px solid #e2e2e2;
+	padding-bottom: 17px;
+}
+.new-alt-pages .column-topleft {
+	border-top-left-radius: 5px;
+}
+.new-alt-pages .column-bottomleft {
+	border-bottom-left-radius: 5px;
+}
+.new-alt-pages .column-topright {
+	border-top-right-radius: 5px;
+}
+.new-alt-pages .column-bottomright {
+	border-bottom-right-radius: 5px;
+}
+.new-alt-pages.new-alt-pages--ppc {
+	margin-top: 68px;
+}
