@@ -83,12 +83,12 @@
 
 					<div data-ng-repeat="form in forms"
 							class="text-center col-xs-6 col-sm-3">
-						<div ng-style="{ 'background-color': '#153B4B', 'color': '#fff'}"
+						<div ng-style="{ 'background-color': form.backgroundColor, 'color': form.color}"
 							class="form-item container">
 
 							<div class="row">
 								<a href="{{form.link}}"
-									ng-style="{ 'color': white }"
+									ng-style="{ 'color': form.color }"
 									class="title-row col-xs-12">
 									<h4 class="list-group-item-heading">
 										{{form.title}}

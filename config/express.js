@@ -97,7 +97,7 @@ module.exports = function(db) {
 	app.use(methodOverride());
 
 	// Use helmet to secure Express headers
-	app.use(helmet.xframe());
+	//app.use(helmet.xframe());
 	app.use(helmet.xssFilter());
 	app.use(helmet.nosniff());
 	app.use(helmet.ienoopen());
